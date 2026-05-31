@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pueblo | Postales de Antioquia</title>
+    <meta name="description" content="Postal digital de un pueblo antioqueño con ubicación, clima, datos y experiencias.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="detail-body">
+
+    <header id="navbar">
+        <div class="nav-inner">
+            <a href="index.html#home" class="nav-logo">
+                <span class="nav-logo-text">Postales de Antioquia</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Inicio</a></li>
+                    <li><a href="index.html#explorar">Explorar</a></li>
+                    <li><a href="index.html#rutas">Rutas</a></li>
+                    <li><a href="index.html#galeria">Galería</a></li>
+                    <li><a href="index.html#historias">Historias</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="language-toggle"
+                    id="languageToggle"
+                    type="button"
+                    aria-label="Cambiar idioma a inglés">
+                    <span class="flag-icon flag-colombia" id="languageFlag" aria-hidden="true"></span>
+                    <span id="languageCode">ES</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="townPage">
+        <section class="town-detail-hero">
+            <img id="heroImage" src="imagenes/guatape.jpeg" alt="" class="hero-bg">
+            <span class="photo-credit" id="heroCredit"></span>
+            <div class="hero-overlay"></div>
+
+            <div class="town-detail-content container fade-up">
+                <a href="index.html#explorar" class="breadcrumb-link">Inicio / Explorar</a>
+                <span class="section-eyebrow" id="townRegion">Oriente Antioqueño</span>
+                <h1 id="townName">Guatapé</h1>
+                <p id="townPhrase">Donde el agua abraza la piedra y el color abraza la vida.</p>
+            </div>
+        </section>
+
+        <section class="town-detail-section">
+            <div class="container detail-layout">
+                <article class="detail-story fade-up">
+                    <span class="section-eyebrow">Postal del territorio</span>
+                    <h2 id="storyTitle">Guatapé en detalle</h2>
+                    <p id="storyOne"></p>
+                    <p id="storyTwo"></p>
+                </article>
+
+                <aside class="detail-facts fade-up delay-1">
+                    <h2>Datos rápidos</h2>
+                    <div class="fact-grid">
+                        <div>
+                            <span>Ubicación</span>
+                            <strong id="location"></strong>
+                        </div>
+                        <div>
+                            <span>Desde Medellín</span>
+                            <strong id="distance"></strong>
+                        </div>
+                        <div>
+                            <span>Clima</span>
+                            <strong id="climate"></strong>
+                        </div>
+                        <div>
+                            <span>Población aprox.</span>
+                            <strong id="population"></strong>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="town-detail-section detail-muted">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="section-eyebrow">Experiencias</span>
+                    <h2 class="section-title">Cosas para hacer</h2>
+                    <p class="section-subtitle">Una guía inicial para imaginar el viaje y preparar la ruta.</p>
+                </div>
+
+                <div class="things-grid" id="thingsGrid"></div>
+            </div>
+        </section>
+
+        <section class="town-detail-section">
+            <div class="container map-layout">
+                <div class="fade-up">
+                    <span class="section-eyebrow">Mapa</span>
+                    <h2 class="section-title">Dónde queda</h2>
+                    <p id="mapText"></p>
+                    <a id="mapsLink" class="btn detail-btn" target="_blank" rel="noopener">Ver en Google Maps</a>
+                </div>
+
+                <div class="map-frame fade-up delay-1">
+                    <iframe id="mapFrame" title="Mapa del pueblo" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-logo">Postales de Antioquia</h3>
+                    <p>Una revista digital inspirada en los pueblos, paisajes y tradiciones que hacen única a Antioquia.</p>
+                </div>
+                <div>
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="index.html#home">Inicio</a></li>
+                        <li><a href="index.html#explorar">Explorar</a></li>
+                        <li><a href="index.html#rutas">Rutas</a></li>
+                        <li><a href="index.html#galeria">Galería</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Pueblos</h4>
+                    <ul>
+                        <li>Guatapé</li>
+                        <li>Jardín</li>
+                        <li>Jericó</li>
+                        <li>Santa Fe de Antioquia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Proyecto</h4>
+                    <p>Proyecto académico de diseño editorial y web.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Postales de Antioquia — Proyecto académico</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="accessibility-widget" id="accessibilityWidget">
+        <button class="accessibility-toggle"
+            id="accessibilityToggle"
+            type="button"
+            aria-label="Abrir opciones de accesibilidad"
+            aria-expanded="false"
+            aria-controls="accessibilityPanel">
+            Aa
+        </button>
+
+        <div class="accessibility-panel" id="accessibilityPanel" aria-label="Opciones de accesibilidad">
+            <h2>Accesibilidad</h2>
+
+            <button type="button" class="accessibility-option" data-accessibility="largeText">
+                Texto grande
+            </button>
+
+            <button type="button" class="accessibility-option" data-accessibility="highContrast">
+                Alto contraste
+            </button>
+
+            <button type="button" class="accessibility-option" data-accessibility="reduceMotion">
+                Reducir movimiento
+            </button>
+
+            <button type="button" class="accessibility-option" data-accessibility="underlineLinks">
+                Subrayar enlaces
+            </button>
+
+            <button type="button" class="accessibility-reset" id="accessibilityReset">
+                Restablecer
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const towns = {
+            guatape: {
+                name: "Guatapé",
+                image: "imagenes/guatape.jpeg",
+                region: "Oriente Antioqueño",
+                phrase: "Donde el agua abraza la piedra y el color abraza la vida.",
+                location: "Oriente de Antioquia, zona de embalses.",
+                distance: "Aprox. 80 km / 2 horas desde Medellín.",
+                climate: "Templado, cerca de 18-22 °C.",
+                population: "Aprox. 9.000 habitantes.",
+                map: "Guatapé, Antioquia, Colombia",
+                story: [
+                    "Guatapé se reconoce por sus zócalos, sus fachadas intensas y un embalse que cambia de color con la luz del día. Es uno de esos destinos donde la fotografía aparece sola: en una esquina pintada, en una lancha sobre el agua o en la vista amplia desde la piedra.",
+                    "Su energía mezcla turismo, tradición y paisaje. Caminarlo es pasar de una plaza viva a callejones llenos de color, con el agua siempre cerca como telón de fondo."
+                ],
+                things: ["Subir la Piedra del Peñol", "Recorrer la Calle del Recuerdo", "Navegar por el embalse", "Fotografiar los zócalos", "Probar cocina local frente al agua"]
+            },
+            jardin: {
+                name: "Jardín",
+                image: "imagenes/jardin.jpeg",
+                region: "Suroeste Antioqueño",
+                phrase: "Café, balcones y montañas que parecen quedarse mirando.",
+                location: "Suroeste de Antioquia, entre montañas cafeteras.",
+                distance: "Aprox. 130 km / 3 a 4 horas desde Medellín.",
+                climate: "Templado fresco, cerca de 18-21 °C.",
+                population: "Aprox. 14.000 habitantes.",
+                map: "Jardín, Antioquia, Colombia",
+                story: [
+                    "Jardín tiene ritmo de plaza: sillas de colores, café recién servido y montañas que rodean el casco urbano como un teatro natural. Su arquitectura conserva una elegancia sencilla, muy cercana a la vida cotidiana.",
+                    "Es un destino para caminar despacio, mirar balcones, escuchar la plaza y seguir el aroma del café hacia fincas, miradores y caminos verdes."
+                ],
+                things: ["Tomar café en el parque principal", "Visitar la Basílica de la Inmaculada Concepción", "Subir a miradores", "Hacer rutas cafeteras", "Caminar hacia cascadas cercanas"]
+            },
+            santafe: {
+                name: "Santa Fe de Antioquia",
+                image: "imagenes/santafe.jpeg",
+                region: "Occidente Antioqueño",
+                phrase: "Calor colonial, calles de piedra y memoria bajo el sol.",
+                location: "Occidente de Antioquia, cerca del río Cauca.",
+                distance: "Aprox. 60 km / 1.5 a 2 horas desde Medellín.",
+                climate: "Cálido y seco, cerca de 27-32 °C.",
+                population: "Aprox. 25.000 habitantes.",
+                map: "Santa Fe de Antioquia, Antioquia, Colombia",
+                story: [
+                    "Santa Fe de Antioquia guarda una sensación antigua: muros blancos, puertas altas, iglesias y calles empedradas que cuentan siglos sin necesidad de hablar demasiado.",
+                    "Su encanto está en el contraste entre el sol fuerte, las sombras coloniales y la vida pausada de sus plazas. Es patrimonio, fotografía y descanso en clave cálida."
+                ],
+                things: ["Caminar el centro histórico", "Cruzar el Puente de Occidente", "Visitar iglesias coloniales", "Probar dulces tradicionales", "Fotografiar patios y fachadas"]
+            },
+            jerico: {
+                name: "Jericó",
+                image: "imagenes/jerico.jpeg",
+                region: "Suroeste Antioqueño",
+                phrase: "Color, café de altura y tradición entre montañas.",
+                location: "Suroeste de Antioquia, zona cafetera.",
+                distance: "Aprox. 110 km / 3 horas desde Medellín.",
+                climate: "Templado, cerca de 18-22 °C.",
+                population: "Aprox. 12.000 habitantes.",
+                map: "Jericó, Antioquia, Colombia",
+                story: [
+                    "Jericó combina balcones coloridos, calles empinadas y una identidad cultural muy marcada. Es un pueblo de oficios, café, espiritualidad y paisaje.",
+                    "La experiencia está en mirar hacia arriba: fachadas, montañas, nubes y rutas que invitan a caminar sin prisa entre tradición y aire fresco."
+                ],
+                things: ["Visitar el parque principal", "Conocer el Museo MAJA", "Subir al morro El Salvador", "Comprar artesanías en carriel", "Hacer una experiencia cafetera"]
+            },
+            concepcion: {
+                name: "Concepción",
+                image: "imagenes/concepcion.jpeg",
+                region: "Norte Antioqueño",
+                phrase: "Un pueblo blanco entre montañas, silencio y memoria.",
+                location: "Norte de Antioquia, cerca del altiplano oriental.",
+                distance: "Aprox. 75 km / 2.5 horas desde Medellín.",
+                climate: "Frío suave, cerca de 16-20 °C.",
+                population: "Aprox. 4.000 habitantes.",
+                map: "Concepción, Antioquia, Colombia",
+                story: [
+                    "Concepción se siente íntimo: calles tranquilas, casas claras y montañas que envuelven el pueblo con una calma especial. Es una postal menos obvia, pero muy poderosa.",
+                    "Su valor está en la pausa. Aquí el viaje no corre: se camina, se mira, se conversa y se entiende otra forma de belleza antioqueña."
+                ],
+                things: ["Caminar el centro histórico", "Visitar la iglesia principal", "Recorrer caminos rurales", "Fotografiar arquitectura tradicional", "Disfrutar miradores naturales"]
+            },
+            marinilla: {
+                name: "Marinilla",
+                image: "imagenes/marinilla.jpeg",
+                region: "Oriente Antioqueño",
+                phrase: "Música, memoria y arquitectura republicana en el Oriente.",
+                location: "Oriente de Antioquia, cerca de Rionegro.",
+                distance: "Aprox. 50 km / 1 a 1.5 horas desde Medellín.",
+                climate: "Templado fresco, cerca de 17-21 °C.",
+                population: "Aprox. 70.000 habitantes.",
+                map: "Marinilla, Antioquia, Colombia",
+                story: [
+                    "Marinilla tiene una identidad cultural fuerte, ligada a la música, la historia y las tradiciones del Oriente antioqueño. Sus calles mezclan vida urbana y memoria local.",
+                    "Es un destino ideal para acercarse a la arquitectura republicana, a los templos y a una Antioquia cotidiana que vibra entre pasado y presente."
+                ],
+                things: ["Visitar templos y plazas", "Conocer espacios culturales", "Probar cocina tradicional", "Recorrer el centro", "Usarlo como punto de partida por el Oriente"]
+            },
+            granada: {
+                name: "Granada",
+                image: "imagenes/granada.jpeg",
+                region: "Oriente Antioqueño",
+                phrase: "Memoria, montaña y comunidad que florece.",
+                location: "Oriente de Antioquia, zona de montañas y ríos.",
+                distance: "Aprox. 75 km / 2 a 2.5 horas desde Medellín.",
+                climate: "Templado, cerca de 18-22 °C.",
+                population: "Aprox. 10.000 habitantes.",
+                map: "Granada, Antioquia, Colombia",
+                story: [
+                    "Granada es un pueblo atravesado por la memoria y por una fuerza comunitaria que se siente en su manera de reconstruirse y narrarse. El paisaje acompaña esa historia con montañas y caminos verdes.",
+                    "Visitarlo es acercarse a una Antioquia sensible, donde el territorio no solo se mira: también se escucha."
+                ],
+                things: ["Recorrer el parque principal", "Conocer espacios de memoria", "Caminar rutas naturales", "Visitar cascadas cercanas", "Conversar con proyectos comunitarios"]
+            },
+            "la-ceja": {
+                name: "La Ceja",
+                image: "imagenes/la-ceja.jpeg",
+                region: "Oriente Antioqueño",
+                phrase: "Flores, aire fresco y horizonte verde.",
+                location: "Oriente de Antioquia, en el altiplano.",
+                distance: "Aprox. 45 km / 1 a 1.5 horas desde Medellín.",
+                climate: "Frío suave, cerca de 15-19 °C.",
+                population: "Aprox. 70.000 habitantes.",
+                map: "La Ceja, Antioquia, Colombia",
+                story: [
+                    "La Ceja se abre entre cultivos, flores y un aire fresco que cambia el ritmo del viaje. Es cercana a Medellín, pero conserva una relación directa con el paisaje verde del altiplano.",
+                    "Su atractivo está en la mezcla de naturaleza, vida local y rutas tranquilas para respirar otro clima."
+                ],
+                things: ["Visitar zonas floricultoras", "Recorrer parques y cafés", "Hacer rutas en bicicleta", "Explorar miradores", "Probar panadería y comida local"]
+            },
+            cocorna: {
+                name: "Cocorná",
+                image: "imagenes/cocorna.jpeg",
+                region: "Oriente Antioqueño",
+                phrase: "Agua, aventura y montaña tropical.",
+                location: "Oriente de Antioquia, corredor hacia el Magdalena Medio.",
+                distance: "Aprox. 85 km / 2 a 2.5 horas desde Medellín.",
+                climate: "Cálido húmedo, cerca de 24-28 °C.",
+                population: "Aprox. 15.000 habitantes.",
+                map: "Cocorná, Antioquia, Colombia",
+                story: [
+                    "Cocorná es un destino de agua. Ríos, charcos, cascadas y montañas tropicales hacen que el viaje tenga sonido propio: corriente, bosque y aventura.",
+                    "Es una postal para quienes buscan moverse, caminar, bañarse en río y sentir la Antioquia más verde y viva."
+                ],
+                things: ["Visitar cascadas y charcos", "Hacer caminatas ecológicas", "Practicar deportes de aventura", "Recorrer miradores", "Disfrutar comida de carretera"]
+            },
+            penol: {
+                name: "El Peñol",
+                image: "imagenes/penol.jpeg",
+                region: "Oriente Antioqueño",
+                phrase: "Piedra, embalse y memoria de un pueblo renacido.",
+                location: "Oriente de Antioquia, junto al embalse Peñol-Guatapé.",
+                distance: "Aprox. 70 km / 1.5 a 2 horas desde Medellín.",
+                climate: "Templado, cerca de 18-22 °C.",
+                population: "Aprox. 20.000 habitantes.",
+                map: "El Peñol, Antioquia, Colombia",
+                story: [
+                    "El Peñol está marcado por el agua y por una historia de transformación territorial. El embalse cambió el paisaje y también la forma de recordar el pueblo.",
+                    "Hoy es un lugar para mirar horizontes abiertos, entender la relación entre memoria y desarrollo, y recorrer una zona donde el paisaje parece no terminar."
+                ],
+                things: ["Visitar el Viejo Peñol", "Recorrer el embalse", "Subir a miradores", "Conocer la plaza principal", "Conectar la ruta con Guatapé"]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const key = params.get("p") || "guatape";
+        const town = towns[key] || towns.guatape;
+        const encodedMap = encodeURIComponent(town.map);
+        const thingsGrid = document.getElementById("thingsGrid");
+        const mapFrame = document.getElementById("mapFrame");
+        const mapsLink = document.getElementById("mapsLink");
+        const imageCredits = {
+            "imagenes/cocorna.jpeg": "Foto: Oriente Antioqueño",
+            "imagenes/concepcion.jpeg": "Foto: Radio Nacional de Colombia",
+            "imagenes/granada.jpeg": "Foto: Expedia",
+            "imagenes/guatape.jpeg": "Foto: Guatapé Colombia",
+            "imagenes/jardin.jpeg": "Foto: H13N",
+            "imagenes/jerico.jpeg": "Foto: Travelgrafía",
+            "imagenes/la-ceja.jpeg": "Foto: Radio Nacional de Colombia",
+            "imagenes/marinilla.jpeg": "Foto: Turismo Antioquia Travel",
+            "imagenes/penol.jpeg": "Foto: Provincia ABT",
+            "imagenes/santafe.jpeg": "Foto: Real City Tours"
+        };
+
+        const detailText = {
+            es: {
+                brand: "Postales de Antioquia",
+                nav: ["Inicio", "Explorar", "Rutas", "Galería", "Historias", "Nosotros"],
+                breadcrumb: "Inicio / Explorar",
+                storyEyebrow: "Postal del territorio",
+                storyTitle: `${town.name} en detalle`,
+                quickFacts: "Datos rápidos",
+                labels: ["Ubicación", "Desde Medellín", "Clima", "Población aprox."],
+                experiencesEyebrow: "Experiencias",
+                experiencesTitle: "Cosas para hacer",
+                experiencesSubtitle: "Una guía inicial para imaginar el viaje y preparar la ruta.",
+                thingText: "Una experiencia sugerida para vivir el pueblo desde su paisaje, su cultura y su ritmo local.",
+                mapEyebrow: "Mapa",
+                mapTitle: "Dónde queda",
+                mapText: `${town.name} se ubica en ${town.location.toLowerCase()} La distancia indicada es aproximada y puede variar según la ruta y el tráfico.`,
+                mapsButton: "Ver en Google Maps",
+                footerTagline: "Una revista digital inspirada en los pueblos, paisajes y tradiciones que hacen única a Antioquia.",
+                footerExplore: "Explorar",
+                footerTowns: "Pueblos",
+                footerProject: "Proyecto",
+                footerProjectText: "Proyecto académico de diseño editorial y web.",
+                footerCredit: "© 2025 Postales de Antioquia — Proyecto académico",
+                accessibilityTitle: "Accesibilidad",
+                accessibilityOptions: ["Texto grande", "Alto contraste", "Reducir movimiento", "Subrayar enlaces"],
+                accessibilityReset: "Restablecer",
+                accessibilityToggleLabel: "Abrir opciones de accesibilidad",
+                languageLabel: "Cambiar idioma a inglés",
+                description: `${town.name}: ubicación, clima, distancia desde Medellín y experiencias para visitar.`
+            },
+            en: {
+                brand: "Postcards from Antioquia",
+                nav: ["Home", "Explore", "Routes", "Gallery", "Stories", "About"],
+                breadcrumb: "Home / Explore",
+                storyEyebrow: "Postcard from the territory",
+                storyTitle: `${town.name} in detail`,
+                quickFacts: "Quick facts",
+                labels: ["Location", "From Medellín", "Weather", "Approx. population"],
+                experiencesEyebrow: "Experiences",
+                experiencesTitle: "Things to do",
+                experiencesSubtitle: "A first guide to imagine the trip and prepare the route.",
+                thingText: "A suggested experience to enjoy the town through its landscape, culture and local rhythm.",
+                mapEyebrow: "Map",
+                mapTitle: "Where it is",
+                mapText: `${town.name} is located in ${town.location.toLowerCase()} The distance is approximate and may vary depending on route and traffic.`,
+                mapsButton: "View on Google Maps",
+                footerTagline: "A digital magazine inspired by the towns, landscapes and traditions that make Antioquia unique.",
+                footerExplore: "Explore",
+                footerTowns: "Towns",
+                footerProject: "Project",
+                footerProjectText: "Academic project for editorial and web design.",
+                footerCredit: "© 2025 Postcards from Antioquia — Academic project",
+                accessibilityTitle: "Accessibility",
+                accessibilityOptions: ["Large text", "High contrast", "Reduce motion", "Underline links"],
+                accessibilityReset: "Reset",
+                accessibilityToggleLabel: "Open accessibility options",
+                languageLabel: "Switch language to Spanish",
+                description: `${town.name}: location, weather, distance from Medellín and travel experiences.`
+            }
+        };
+
+        const englishTownCopy = {
+            guatape: {
+                region: "Eastern Antioquia",
+                phrase: "Where water embraces stone and color embraces life.",
+                location: "Eastern Antioquia, reservoir area.",
+                distance: "Approx. 80 km / 2 hours from Medellín.",
+                climate: "Mild, around 18-22 °C.",
+                population: "Approx. 9,000 inhabitants.",
+                story: [
+                    "Guatapé is known for its zócalos, vivid facades and a reservoir that changes color with the light of day. It is one of those destinations where photography appears naturally: on a painted corner, on a boat over the water or in the wide view from the rock.",
+                    "Its energy blends tourism, tradition and landscape. Walking through it means moving from a lively plaza to colorful alleys, with water always nearby as a backdrop."
+                ],
+                things: ["Climb El Peñol Rock", "Walk the Calle del Recuerdo", "Sail across the reservoir", "Photograph the zócalos", "Try local food by the water"]
+            },
+            jardin: {
+                region: "Southwestern Antioquia",
+                phrase: "Coffee, balconies and mountains that seem to watch back.",
+                location: "Southwestern Antioquia, among coffee mountains.",
+                distance: "Approx. 130 km / 3 to 4 hours from Medellín.",
+                climate: "Cool mild weather, around 18-21 °C.",
+                population: "Approx. 14,000 inhabitants.",
+                story: [
+                    "Jardín has the rhythm of a plaza: colorful chairs, freshly served coffee and mountains surrounding the town like a natural theater. Its architecture keeps a simple elegance, very close to everyday life.",
+                    "It is a destination for slow walks, balconies, plaza sounds and coffee-scented paths toward farms, viewpoints and green trails."
+                ],
+                things: ["Have coffee in the main square", "Visit the Basilica", "Go up to viewpoints", "Take coffee routes", "Walk toward nearby waterfalls"]
+            },
+            santafe: {
+                region: "Western Antioquia",
+                phrase: "Colonial warmth, stone streets and memory under the sun.",
+                location: "Western Antioquia, near the Cauca River.",
+                distance: "Approx. 60 km / 1.5 to 2 hours from Medellín.",
+                climate: "Warm and dry, around 27-32 °C.",
+                population: "Approx. 25,000 inhabitants.",
+                story: [
+                    "Santa Fe de Antioquia carries an old feeling: white walls, tall doors, churches and cobblestone streets that tell centuries without needing to say much.",
+                    "Its charm lives in the contrast between strong sun, colonial shadows and the slow life of its plazas. It is heritage, photography and rest in a warm key."
+                ],
+                things: ["Walk the historic center", "Cross the Puente de Occidente", "Visit colonial churches", "Try traditional sweets", "Photograph patios and facades"]
+            },
+            jerico: {
+                region: "Southwestern Antioquia",
+                phrase: "Color, high-altitude coffee and tradition among mountains.",
+                location: "Southwestern Antioquia, coffee region.",
+                distance: "Approx. 110 km / 3 hours from Medellín.",
+                climate: "Mild, around 18-22 °C.",
+                population: "Approx. 12,000 inhabitants.",
+                story: [
+                    "Jericó combines colorful balconies, steep streets and a very strong cultural identity. It is a town of crafts, coffee, spirituality and landscape.",
+                    "The experience is in looking upward: facades, mountains, clouds and routes that invite you to walk slowly between tradition and fresh air."
+                ],
+                things: ["Visit the main square", "Explore the MAJA Museum", "Go up to El Salvador hill", "Buy carriel crafts", "Take a coffee experience"]
+            },
+            concepcion: {
+                region: "Northern Antioquia",
+                phrase: "A whitewashed town among mountains, silence and memory.",
+                location: "Northern Antioquia, near the eastern highlands.",
+                distance: "Approx. 75 km / 2.5 hours from Medellín.",
+                climate: "Cool mild weather, around 16-20 °C.",
+                population: "Approx. 4,000 inhabitants.",
+                story: [
+                    "Concepción feels intimate: quiet streets, bright houses and mountains that wrap the town in a special calm. It is a less obvious postcard, but a powerful one.",
+                    "Its value lies in the pause. Here the trip does not rush: you walk, look, talk and understand another kind of Antioquian beauty."
+                ],
+                things: ["Walk the historic center", "Visit the main church", "Explore rural paths", "Photograph traditional architecture", "Enjoy natural viewpoints"]
+            },
+            marinilla: {
+                region: "Eastern Antioquia",
+                phrase: "Music, memory and republican architecture in the East.",
+                location: "Eastern Antioquia, near Rionegro.",
+                distance: "Approx. 50 km / 1 to 1.5 hours from Medellín.",
+                climate: "Cool mild weather, around 17-21 °C.",
+                population: "Approx. 70,000 inhabitants.",
+                story: [
+                    "Marinilla has a strong cultural identity, linked to music, history and the traditions of Eastern Antioquia. Its streets mix urban life with local memory.",
+                    "It is an ideal destination to approach republican architecture, temples and an everyday Antioquia that moves between past and present."
+                ],
+                things: ["Visit temples and plazas", "Explore cultural spaces", "Try traditional food", "Walk through the town center", "Use it as a starting point for the East"]
+            },
+            granada: {
+                region: "Eastern Antioquia",
+                phrase: "Memory, mountains and a community that blooms.",
+                location: "Eastern Antioquia, an area of mountains and rivers.",
+                distance: "Approx. 75 km / 2 to 2.5 hours from Medellín.",
+                climate: "Mild, around 18-22 °C.",
+                population: "Approx. 10,000 inhabitants.",
+                story: [
+                    "Granada is a town crossed by memory and by a community strength that can be felt in the way it rebuilds and tells itself. The landscape accompanies that story with mountains and green paths.",
+                    "Visiting it means approaching a sensitive Antioquia, where the territory is not only seen: it is also listened to."
+                ],
+                things: ["Walk around the main square", "Visit memory spaces", "Take nature walks", "Explore nearby waterfalls", "Connect with community projects"]
+            },
+            "la-ceja": {
+                region: "Eastern Antioquia",
+                phrase: "Flowers, cool air and a green horizon.",
+                location: "Eastern Antioquia, in the high plateau.",
+                distance: "Approx. 45 km / 1 to 1.5 hours from Medellín.",
+                climate: "Cool weather, around 15-19 °C.",
+                population: "Approx. 70,000 inhabitants.",
+                story: [
+                    "La Ceja opens among crops, flowers and fresh air that changes the rhythm of the trip. It is close to Medellín, but keeps a direct relationship with the green landscape of the plateau.",
+                    "Its appeal lies in the mix of nature, local life and quiet routes for breathing a different climate."
+                ],
+                things: ["Visit flower-growing areas", "Explore parks and cafés", "Ride cycling routes", "Discover viewpoints", "Try local bakeries and food"]
+            },
+            cocorna: {
+                region: "Eastern Antioquia",
+                phrase: "Water, adventure and tropical mountains.",
+                location: "Eastern Antioquia, on the corridor toward Magdalena Medio.",
+                distance: "Approx. 85 km / 2 to 2.5 hours from Medellín.",
+                climate: "Warm and humid, around 24-28 °C.",
+                population: "Approx. 15,000 inhabitants.",
+                story: [
+                    "Cocorná is a water destination. Rivers, natural pools, waterfalls and tropical mountains give the trip its own sound: current, forest and adventure.",
+                    "It is a postcard for those who want to move, walk, swim in rivers and feel Antioquia at its greenest and most alive."
+                ],
+                things: ["Visit waterfalls and natural pools", "Take ecological hikes", "Try adventure sports", "Explore viewpoints", "Enjoy roadside food"]
+            },
+            penol: {
+                region: "Eastern Antioquia",
+                phrase: "Stone, reservoir and the memory of a reborn town.",
+                location: "Eastern Antioquia, next to the Peñol-Guatapé reservoir.",
+                distance: "Approx. 70 km / 1.5 to 2 hours from Medellín.",
+                climate: "Mild, around 18-22 °C.",
+                population: "Approx. 20,000 inhabitants.",
+                story: [
+                    "El Peñol is marked by water and by a history of territorial transformation. The reservoir changed the landscape and also the way the town remembers itself.",
+                    "Today it is a place for open horizons, for understanding the relationship between memory and development, and for traveling through an area where the landscape seems endless."
+                ],
+                things: ["Visit Old Peñol", "Tour the reservoir", "Go up to viewpoints", "Explore the main square", "Connect the route with Guatapé"]
+            }
+        };
+
+        const getTownCopy = (language) => {
+            if (language === "en") {
+                return englishTownCopy[key] || {
+                    region: town.region,
+                    phrase: town.phrase,
+                    location: town.location,
+                    distance: town.distance.replace("Aprox.", "Approx."),
+                    climate: town.climate,
+                    population: town.population.replace("Aprox.", "Approx."),
+                    story: town.story,
+                    things: town.things
+                };
+            }
+
+            return town;
+        };
+
+        const setText = (selector, value) => {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.textContent = value;
+            }
+        };
+
+        const setListText = (selector, values) => {
+            document.querySelectorAll(selector).forEach((element, index) => {
+                if (values[index]) {
+                    element.textContent = values[index];
+                }
+            });
+        };
+
+        const renderTownPage = (language) => {
+            const text = detailText[language];
+            const copy = getTownCopy(language);
+
+            document.documentElement.lang = language;
+            document.title = `${town.name} | ${text.brand}`;
+            document.querySelector("meta[name='description']").setAttribute("content", text.description);
+
+            setText(".nav-logo-text", text.brand);
+            setListText(".nav-links a", text.nav);
+            setText(".breadcrumb-link", text.breadcrumb);
+
+            document.getElementById("heroImage").src = town.image;
+            document.getElementById("heroImage").alt = `${town.name}, Antioquia`;
+            document.getElementById("heroCredit").textContent = imageCredits[town.image] || "Fuente fotográfica por confirmar";
+            document.getElementById("townRegion").textContent = copy.region;
+            document.getElementById("townName").textContent = town.name;
+            document.getElementById("townPhrase").textContent = copy.phrase;
+
+            setText(".detail-story .section-eyebrow", text.storyEyebrow);
+            setText("#storyTitle", text.storyTitle);
+            document.getElementById("storyOne").textContent = copy.story[0];
+            document.getElementById("storyTwo").textContent = copy.story[1];
+
+            setText(".detail-facts h2", text.quickFacts);
+            setListText(".fact-grid span", text.labels);
+            document.getElementById("location").textContent = copy.location;
+            document.getElementById("distance").textContent = copy.distance;
+            document.getElementById("climate").textContent = copy.climate;
+            document.getElementById("population").textContent = copy.population;
+
+            setText(".detail-muted .section-eyebrow", text.experiencesEyebrow);
+            setText(".detail-muted .section-title", text.experiencesTitle);
+            setText(".detail-muted .section-subtitle", text.experiencesSubtitle);
+
+            thingsGrid.innerHTML = "";
+            copy.things.forEach((thing, index) => {
+                const card = document.createElement("article");
+                card.className = `thing-card fade-up delay-${index % 4}`;
+                card.innerHTML = `<span>${String(index + 1).padStart(2, "0")}</span><h3>${thing}</h3><p>${text.thingText}</p>`;
+                thingsGrid.appendChild(card);
+            });
+
+            setText(".map-layout .section-eyebrow", text.mapEyebrow);
+            setText(".map-layout .section-title", text.mapTitle);
+            setText("#mapText", text.mapText);
+            setText("#mapsLink", text.mapsButton);
+            mapsLink.href = `https://www.google.com/maps/search/?api=1&query=${encodedMap}`;
+            mapFrame.src = `https://www.google.com/maps?q=${encodedMap}&output=embed`;
+
+            setText(".footer-logo", text.brand);
+            setText(".footer-grid > div:first-child p", text.footerTagline);
+            setText(".footer-grid > div:nth-child(2) h4", text.footerExplore);
+            setListText(".footer-grid > div:nth-child(2) a", text.nav.slice(0, 4));
+            setText(".footer-grid > div:nth-child(3) h4", text.footerTowns);
+            setText(".footer-grid > div:nth-child(4) h4", text.footerProject);
+            setText(".footer-grid > div:nth-child(4) p", text.footerProjectText);
+            setText(".footer-bottom p", text.footerCredit);
+
+            setText(".accessibility-panel h2", text.accessibilityTitle);
+            setListText(".accessibility-option", text.accessibilityOptions);
+            setText(".accessibility-reset", text.accessibilityReset);
+            document.getElementById("accessibilityToggle")?.setAttribute("aria-label", text.accessibilityToggleLabel);
+        };
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+        const observeAnimatedItems = () => {
+            document.querySelectorAll(".fade-up").forEach((item) => observer.observe(item));
+        };
+
+        const languageToggle = document.getElementById("languageToggle");
+        const languageCode = document.getElementById("languageCode");
+        const languageFlag = document.getElementById("languageFlag");
+        const savedLanguage = localStorage.getItem("siteLanguage") || "es";
+
+        const applyDetailLanguage = (language) => {
+            const isSpanish = language === "es";
+
+            renderTownPage(language);
+            observeAnimatedItems();
+            languageCode.textContent = isSpanish ? "ES" : "EN";
+            languageFlag.classList.toggle("flag-colombia", isSpanish);
+            languageFlag.classList.toggle("flag-uk", !isSpanish);
+            languageToggle.setAttribute("aria-label", detailText[language].languageLabel);
+            localStorage.setItem("siteLanguage", language);
+        };
+
+        applyDetailLanguage(savedLanguage);
+
+        languageToggle.addEventListener("click", () => {
+            const nextLanguage = document.documentElement.lang === "es" ? "en" : "es";
+            applyDetailLanguage(nextLanguage);
+        });
+
+        const accessibilityToggle = document.getElementById("accessibilityToggle");
+        const accessibilityPanel = document.getElementById("accessibilityPanel");
+        const accessibilityOptions = document.querySelectorAll(".accessibility-option");
+        const accessibilityReset = document.getElementById("accessibilityReset");
+
+        const accessibilityClasses = {
+            largeText: "a11y-large-text",
+            highContrast: "a11y-high-contrast",
+            reduceMotion: "a11y-reduce-motion",
+            underlineLinks: "a11y-underline-links"
+        };
+
+        const savedAccessibility = JSON.parse(localStorage.getItem("accessibilityOptions") || "{}");
+
+        const updateAccessibilityButtons = () => {
+            accessibilityOptions.forEach((button) => {
+                const option = button.dataset.accessibility;
+                const isActive = document.body.classList.contains(accessibilityClasses[option]);
+                button.classList.toggle("active", isActive);
+                button.setAttribute("aria-pressed", String(isActive));
+            });
+        };
+
+        Object.entries(accessibilityClasses).forEach(([option, className]) => {
+            if (savedAccessibility[option]) {
+                document.body.classList.add(className);
+            }
+        });
+
+        updateAccessibilityButtons();
+
+        accessibilityToggle.addEventListener("click", () => {
+            const isOpen = accessibilityPanel.classList.toggle("open");
+            accessibilityToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        accessibilityOptions.forEach((button) => {
+            button.addEventListener("click", () => {
+                const option = button.dataset.accessibility;
+                const className = accessibilityClasses[option];
+
+                document.body.classList.toggle(className);
+                savedAccessibility[option] = document.body.classList.contains(className);
+                localStorage.setItem("accessibilityOptions", JSON.stringify(savedAccessibility));
+
+                updateAccessibilityButtons();
+            });
+        });
+
+        accessibilityReset.addEventListener("click", () => {
+            Object.values(accessibilityClasses).forEach((className) => {
+                document.body.classList.remove(className);
+            });
+
+            localStorage.removeItem("accessibilityOptions");
+            updateAccessibilityButtons();
+        });
+    </script>
+</body>
+
+</html>
