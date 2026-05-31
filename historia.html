@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia | Postales de Antioquia</title>
+    <meta name="description" content="Crónica editorial de Postales de Antioquia.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="detail-body">
+
+    <header id="navbar">
+        <div class="nav-inner">
+            <a href="index.html#home" class="nav-logo">
+                <span class="nav-logo-text">Postales de Antioquia</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Inicio</a></li>
+                    <li><a href="index.html#explorar">Explorar</a></li>
+                    <li><a href="index.html#rutas">Rutas</a></li>
+                    <li><a href="index.html#galeria">Galería</a></li>
+                    <li><a href="index.html#historias">Historias</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="language-toggle" id="languageToggle" type="button" aria-label="Cambiar idioma a inglés">
+                    <span class="flag-icon flag-colombia" id="languageFlag" aria-hidden="true"></span>
+                    <span id="languageCode">ES</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="story-detail-hero">
+            <img id="storyHeroImage" src="imagenes/penol.jpeg" alt="" class="hero-bg">
+            <span class="photo-credit" id="storyHeroCredit"></span>
+            <div class="hero-overlay"></div>
+
+            <div class="town-detail-content container fade-up">
+                <a href="index.html#historias" class="breadcrumb-link">Inicio / Historias</a>
+                <span class="section-eyebrow" id="storyCategory">Naturaleza</span>
+                <h1 id="storyTitle">El amanecer en El Peñol</h1>
+                <p id="storySummary"></p>
+            </div>
+        </section>
+
+        <section class="town-detail-section">
+            <div class="container article-layout">
+                <article class="chronicle-article fade-up" id="storyBody"></article>
+
+                <aside class="detail-facts fade-up delay-1">
+                    <h2>Postal breve</h2>
+                    <p id="storyAside"></p>
+                    <a href="index.html#historias" class="btn detail-btn">Volver a historias</a>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-logo">Postales de Antioquia</h3>
+                    <p>Una revista digital inspirada en los pueblos, paisajes y tradiciones que hacen única a Antioquia.</p>
+                </div>
+                <div>
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="index.html#home">Inicio</a></li>
+                        <li><a href="index.html#explorar">Explorar</a></li>
+                        <li><a href="index.html#rutas">Rutas</a></li>
+                        <li><a href="index.html#galeria">Galería</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Pueblos</h4>
+                    <ul>
+                        <li>Guatapé</li>
+                        <li>Jardín</li>
+                        <li>Jericó</li>
+                        <li>Santa Fe de Antioquia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Proyecto</h4>
+                    <p>Proyecto académico de diseño editorial y web.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Postales de Antioquia — Proyecto académico</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="accessibility-widget" id="accessibilityWidget">
+        <button class="accessibility-toggle" id="accessibilityToggle" type="button" aria-label="Abrir opciones de accesibilidad" aria-expanded="false" aria-controls="accessibilityPanel">Aa</button>
+
+        <div class="accessibility-panel" id="accessibilityPanel" aria-label="Opciones de accesibilidad">
+            <h2>Accesibilidad</h2>
+            <button type="button" class="accessibility-option" data-accessibility="largeText">Texto grande</button>
+            <button type="button" class="accessibility-option" data-accessibility="highContrast">Alto contraste</button>
+            <button type="button" class="accessibility-option" data-accessibility="reduceMotion">Reducir movimiento</button>
+            <button type="button" class="accessibility-option" data-accessibility="underlineLinks">Subrayar enlaces</button>
+            <button type="button" class="accessibility-reset" id="accessibilityReset">Restablecer</button>
+        </div>
+    </div>
+
+    <script>
+        const stories = {
+            "amanecer-penol": {
+                title: "El amanecer en El Peñol",
+                category: "Naturaleza",
+                image: "imagenes/penol.jpeg",
+                summary: "Un amanecer entre neblina, agua y montaña donde El Peñol y Guatapé muestran una de sus postales más tranquilas y memorables.",
+                paragraphs: [
+                    "Cuando la mañana apenas empieza, El Peñol parece despertar antes que todos. La neblina baja despacio por las montañas y se queda suspendida sobre el embalse como una tela suave, mientras el agua comienza a reflejar los primeros tonos dorados del día. En ese instante, el paisaje no necesita movimiento: basta el silencio, el aire frío y la luz que aparece poco a poco para entender por qué esta ruta pertenece a la naturaleza.",
+                    "Desde los miradores, el horizonte se abre entre verdes profundos y caminos que conducen hacia Guatapé. El embalse cambia de color con cada minuto: primero gris, luego azul pálido, después dorado. A lo lejos, las casas, las lanchas y las montañas parecen formar una postal viva. La Piedra del Peñol se impone como un punto de referencia, pero el verdadero protagonista es el amanecer, esa pausa breve en la que el territorio muestra una de sus versiones más memorables.",
+                    "Esta historia responde a la promesa de la tarjeta: cuando la neblina se retira y el embalse recibe la luz, El Peñol y Guatapé revelan un paisaje íntimo, sereno y profundamente visual. Es una experiencia para iniciar el viaje con calma, mirar Antioquia desde la altura y descubrir cómo la naturaleza también cuenta historias."
+                ]
+            },
+            "sabores-jardin": {
+                title: "Los sabores que definen a Jardín",
+                category: "Gastronomía",
+                image: "imagenes/jardin.jpeg",
+                summary: "Café especial, recetas campesinas y sabores heredados convierten a Jardín en una experiencia gastronómica pausada, cálida y profundamente antioqueña.",
+                paragraphs: [
+                    "En Jardín, el día también se recorre con el paladar. El aroma del café aparece desde temprano, mezclado con el sonido de las tazas en los balcones, las conversaciones en el parque y el paso lento de quienes llegan a desayunar sin afán. Aquí la gastronomía no es solo una lista de platos: es una forma de permanecer, de sentarse a mirar la plaza, de conversar con quien prepara una receta heredada y de reconocer el pueblo a través de sus sabores.",
+                    "El café especial es uno de los protagonistas de esta crónica. Nace en las montañas cercanas, baja en historias campesinas y llega a la mesa como una bebida que guarda memoria. A su alrededor aparecen panes, dulces, preparaciones caseras y comidas tradicionales que han pasado de generación en generación. Cada receta tiene algo de familia, de finca y de domingo en el parque principal.",
+                    "Por eso Jardín no se define únicamente por sus fachadas coloridas o por sus paisajes cafeteros, sino también por la manera en que invita a probar Antioquia con calma. La tarjeta habla de café especial, tradición campesina y recetas transmitidas durante generaciones; la crónica amplía esa idea mostrando que cada sabor es una pequeña postal: una historia servida en la mesa."
+                ]
+            },
+            "arquitectura-siglos": {
+                title: "Arquitectura que cuenta siglos",
+                category: "Patrimonio",
+                image: "imagenes/santafe.jpeg",
+                summary: "Balcones, plazas, iglesias y calles empedradas convierten el patrimonio antioqueño en una narración viva que se descubre caminando.",
+                paragraphs: [
+                    "Hay pueblos donde la historia no está guardada en vitrinas, sino escrita en las paredes, en las puertas altas, en los balcones de madera y en las calles empedradas. Caminar por un pueblo patrimonial de Antioquia es leer con los pies: cada esquina conserva una señal del tiempo, cada fachada guarda una forma de vida y cada plaza recuerda que allí se han encontrado generaciones enteras.",
+                    "Santa Fe de Antioquia, Jericó, Concepción y Marinilla hacen parte de esa memoria construida. En ellos, la arquitectura no funciona solo como decoración para una fotografía, sino como un relato abierto. Las iglesias marcan el centro simbólico del pueblo; los balcones miran hacia la calle como si todavía escucharan las conversaciones antiguas; las casas de tapia, madera y teja hablan de oficios, familias, celebraciones y transformaciones del territorio.",
+                    "La tarjeta resume esta idea al decir que cada balcón y cada calle empedrada conserva una parte de la historia antioqueña. La crónica la desarrolla desde la experiencia del recorrido: mirar hacia arriba, detenerse en una puerta, cruzar una plaza y comprender que el patrimonio no es algo lejano. Está vivo en la manera como los pueblos se habitan, se recuerdan y se muestran al viajero."
+                ]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const key = params.get("h") || "amanecer-penol";
+        const story = stories[key] || stories["amanecer-penol"];
+        const storyBody = document.getElementById("storyBody");
+        const imageCredits = {
+            "imagenes/penol.jpeg": "Foto: Provincia ABT",
+            "imagenes/jardin.jpeg": "Foto: H13N",
+            "imagenes/santafe.jpeg": "Foto: Real City Tours"
+        };
+        const storyCopies = {
+            es: {
+                brand: "Postales de Antioquia",
+                nav: ["Inicio", "Explorar", "Rutas", "Galería", "Historias", "Nosotros"],
+                breadcrumb: "Inicio / Historias",
+                asideTitle: "Postal breve",
+                backButton: "Volver a historias",
+                footerTagline: "Una revista digital inspirada en los pueblos, paisajes y tradiciones que hacen única a Antioquia.",
+                footerExplore: "Explorar",
+                footerTowns: "Pueblos",
+                footerProject: "Proyecto",
+                footerProjectText: "Proyecto académico de diseño editorial y web.",
+                footerCredit: "© 2025 Postales de Antioquia — Proyecto académico",
+                accessibilityTitle: "Accesibilidad",
+                accessibilityOptions: ["Texto grande", "Alto contraste", "Reducir movimiento", "Subrayar enlaces"],
+                accessibilityReset: "Restablecer",
+                languageLabel: "Cambiar idioma a inglés",
+                story
+            },
+            en: {
+                brand: "Postcards from Antioquia",
+                nav: ["Home", "Explore", "Routes", "Gallery", "Stories", "About"],
+                breadcrumb: "Home / Stories",
+                asideTitle: "Short postcard",
+                backButton: "Back to stories",
+                footerTagline: "A digital magazine inspired by the towns, landscapes and traditions that make Antioquia unique.",
+                footerExplore: "Explore",
+                footerTowns: "Towns",
+                footerProject: "Project",
+                footerProjectText: "Academic project for editorial and web design.",
+                footerCredit: "© 2025 Postcards from Antioquia — Academic project",
+                accessibilityTitle: "Accessibility",
+                accessibilityOptions: ["Large text", "High contrast", "Reduce motion", "Underline links"],
+                accessibilityReset: "Reset",
+                languageLabel: "Switch language to Spanish",
+                story: {
+                    ...story,
+                    title: {
+                        "amanecer-penol": "Sunrise in El Peñol",
+                        "sabores-jardin": "The flavors that define Jardín",
+                        "arquitectura-siglos": "Architecture that holds centuries"
+                    }[key],
+                    category: {
+                        "amanecer-penol": "Nature",
+                        "sabores-jardin": "Food",
+                        "arquitectura-siglos": "Heritage"
+                    }[key],
+                    summary: {
+                        "amanecer-penol": "A sunrise between mist, water and mountains where El Peñol and Guatapé reveal one of their quietest and most memorable postcards.",
+                        "sabores-jardin": "Specialty coffee, countryside recipes and inherited flavors turn Jardín into a slow, warm and deeply Antioquian food experience.",
+                        "arquitectura-siglos": "Balconies, plazas, churches and cobblestone streets turn Antioquian heritage into a living story discovered by walking."
+                    }[key],
+                    paragraphs: {
+                        "amanecer-penol": [
+                            "When morning is just beginning, El Peñol seems to wake before everyone else. Mist descends slowly from the mountains and rests above the reservoir like a soft fabric, while the water starts reflecting the first golden tones of the day. In that moment, the landscape does not need movement: silence, cold air and the light appearing little by little are enough to understand why this route belongs to nature.",
+                            "From the viewpoints, the horizon opens between deep greens and roads that lead toward Guatapé. The reservoir changes color with every minute: first gray, then pale blue, then gold. In the distance, houses, boats and mountains seem to form a living postcard. El Peñol Rock stands as a landmark, but the true protagonist is sunrise, that brief pause in which the territory shows one of its most memorable versions.",
+                            "This story responds to the promise of the card: when the mist withdraws and the reservoir receives the light, El Peñol and Guatapé reveal an intimate, serene and deeply visual landscape. It is an experience for beginning the trip calmly, seeing Antioquia from above and discovering how nature also tells stories."
+                        ],
+                        "sabores-jardin": [
+                            "In Jardín, the day can also be traveled through taste. The aroma of coffee appears early, mixed with the sound of cups on balconies, conversations in the park and the slow pace of those arriving for breakfast without hurry. Here, gastronomy is not just a list of dishes: it is a way of staying, of sitting down to watch the plaza, of talking with someone who prepares an inherited recipe and recognizing the town through its flavors.",
+                            "Specialty coffee is one of the protagonists of this chronicle. It is born in the nearby mountains, descends through countryside stories and reaches the table as a drink that holds memory. Around it appear breads, sweets, homemade preparations and traditional meals passed down through generations. Every recipe carries something of family, farm life and Sunday in the main square.",
+                            "That is why Jardín is not defined only by its colorful facades or its coffee landscapes, but also by the way it invites visitors to taste Antioquia slowly. The card speaks of specialty coffee, countryside tradition and recipes passed down through generations; the chronicle expands that idea by showing that every flavor is a small postcard: a story served at the table."
+                        ],
+                        "arquitectura-siglos": [
+                            "There are towns where history is not kept behind glass, but written on walls, tall doors, wooden balconies and cobblestone streets. Walking through a heritage town in Antioquia is reading with your feet: every corner preserves a sign of time, every facade holds a way of life and every plaza remembers that generations have gathered there.",
+                            "Santa Fe de Antioquia, Jericó, Concepción and Marinilla are part of that built memory. In them, architecture is not just decoration for a photograph, but an open narrative. Churches mark the symbolic center of town; balconies look toward the street as if they could still hear old conversations; houses of tapia, wood and tile speak of trades, families, celebrations and transformations of the territory.",
+                            "The card summarizes this idea by saying that every balcony and every cobblestone street preserves part of Antioquia's history. The chronicle develops it through the experience of walking: looking up, stopping at a door, crossing a plaza and understanding that heritage is not distant. It is alive in the way towns are inhabited, remembered and shown to travelers."
+                        ]
+                    }[key]
+                }
+            }
+        };
+
+        const setText = (selector, value) => {
+            const element = document.querySelector(selector);
+            if (element) element.textContent = value;
+        };
+
+        const setListText = (selector, values) => {
+            document.querySelectorAll(selector).forEach((element, index) => {
+                if (values[index]) element.textContent = values[index];
+            });
+        };
+
+        const renderStoryPage = (language) => {
+            const text = storyCopies[language];
+            const currentStory = text.story;
+
+            document.documentElement.lang = language;
+            document.title = `${currentStory.title} | ${text.brand}`;
+            document.querySelector("meta[name='description']").setAttribute("content", currentStory.summary);
+            setText(".nav-logo-text", text.brand);
+            setListText(".nav-links a", text.nav);
+            setText(".breadcrumb-link", text.breadcrumb);
+            document.getElementById("storyHeroImage").src = currentStory.image;
+            document.getElementById("storyHeroImage").alt = currentStory.title;
+            document.getElementById("storyHeroCredit").textContent = imageCredits[currentStory.image] || "Fuente fotográfica por confirmar";
+            document.getElementById("storyCategory").textContent = currentStory.category;
+            document.getElementById("storyTitle").textContent = currentStory.title;
+            document.getElementById("storySummary").textContent = currentStory.summary;
+            document.getElementById("storyAside").textContent = currentStory.summary;
+            setText(".detail-facts h2", text.asideTitle);
+            setText(".detail-facts .detail-btn", text.backButton);
+
+            storyBody.innerHTML = "";
+            currentStory.paragraphs.forEach((paragraph) => {
+                const p = document.createElement("p");
+                p.textContent = paragraph;
+                storyBody.appendChild(p);
+            });
+
+            setText(".footer-logo", text.brand);
+            setText(".footer-grid > div:first-child p", text.footerTagline);
+            setText(".footer-grid > div:nth-child(2) h4", text.footerExplore);
+            setListText(".footer-grid > div:nth-child(2) a", text.nav.slice(0, 4));
+            setText(".footer-grid > div:nth-child(3) h4", text.footerTowns);
+            setText(".footer-grid > div:nth-child(4) h4", text.footerProject);
+            setText(".footer-grid > div:nth-child(4) p", text.footerProjectText);
+            setText(".footer-bottom p", text.footerCredit);
+            setText(".accessibility-panel h2", text.accessibilityTitle);
+            setListText(".accessibility-option", text.accessibilityOptions);
+            setText(".accessibility-reset", text.accessibilityReset);
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        const observeAnimatedItems = () => {
+            document.querySelectorAll(".fade-up").forEach((item) => observer.observe(item));
+        };
+
+        const languageToggle = document.getElementById("languageToggle");
+        const languageCode = document.getElementById("languageCode");
+        const languageFlag = document.getElementById("languageFlag");
+        const applyLanguageShell = (language) => {
+            const isSpanish = language === "es";
+            renderStoryPage(language);
+            observeAnimatedItems();
+            languageCode.textContent = isSpanish ? "ES" : "EN";
+            languageFlag.classList.toggle("flag-colombia", isSpanish);
+            languageFlag.classList.toggle("flag-uk", !isSpanish);
+            languageToggle.setAttribute("aria-label", storyCopies[language].languageLabel);
+            localStorage.setItem("siteLanguage", language);
+        };
+        applyLanguageShell(localStorage.getItem("siteLanguage") || "es");
+        languageToggle.addEventListener("click", () => {
+            applyLanguageShell(document.documentElement.lang === "es" ? "en" : "es");
+        });
+
+        const accessibilityToggle = document.getElementById("accessibilityToggle");
+        const accessibilityPanel = document.getElementById("accessibilityPanel");
+        const accessibilityOptions = document.querySelectorAll(".accessibility-option");
+        const accessibilityReset = document.getElementById("accessibilityReset");
+        const accessibilityClasses = {
+            largeText: "a11y-large-text",
+            highContrast: "a11y-high-contrast",
+            reduceMotion: "a11y-reduce-motion",
+            underlineLinks: "a11y-underline-links"
+        };
+        const savedAccessibility = JSON.parse(localStorage.getItem("accessibilityOptions") || "{}");
+        const updateAccessibilityButtons = () => {
+            accessibilityOptions.forEach((button) => {
+                const option = button.dataset.accessibility;
+                const isActive = document.body.classList.contains(accessibilityClasses[option]);
+                button.classList.toggle("active", isActive);
+                button.setAttribute("aria-pressed", String(isActive));
+            });
+        };
+        Object.entries(accessibilityClasses).forEach(([option, className]) => {
+            if (savedAccessibility[option]) document.body.classList.add(className);
+        });
+        updateAccessibilityButtons();
+        accessibilityToggle.addEventListener("click", () => {
+            const isOpen = accessibilityPanel.classList.toggle("open");
+            accessibilityToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+        accessibilityOptions.forEach((button) => {
+            button.addEventListener("click", () => {
+                const option = button.dataset.accessibility;
+                const className = accessibilityClasses[option];
+                document.body.classList.toggle(className);
+                savedAccessibility[option] = document.body.classList.contains(className);
+                localStorage.setItem("accessibilityOptions", JSON.stringify(savedAccessibility));
+                updateAccessibilityButtons();
+            });
+        });
+        accessibilityReset.addEventListener("click", () => {
+            Object.values(accessibilityClasses).forEach((className) => document.body.classList.remove(className));
+            localStorage.removeItem("accessibilityOptions");
+            updateAccessibilityButtons();
+        });
+    </script>
+</body>
+
+</html>

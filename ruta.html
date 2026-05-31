@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta | Postales de Antioquia</title>
+    <meta name="description" content="Ruta turística de Postales de Antioquia con pueblos, duración, distancia y mapa.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="detail-body">
+
+    <header id="navbar">
+        <div class="nav-inner">
+            <a href="index.html#home" class="nav-logo">
+                <span class="nav-logo-text">Postales de Antioquia</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Inicio</a></li>
+                    <li><a href="index.html#explorar">Explorar</a></li>
+                    <li><a href="index.html#rutas">Rutas</a></li>
+                    <li><a href="index.html#galeria">Galería</a></li>
+                    <li><a href="index.html#historias">Historias</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="language-toggle" id="languageToggle" type="button" aria-label="Cambiar idioma a inglés">
+                    <span class="flag-icon flag-colombia" id="languageFlag" aria-hidden="true"></span>
+                    <span id="languageCode">ES</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="route-detail-hero">
+            <img id="routeHeroImage" src="imagenes/jardin.jpeg" alt="" class="hero-bg">
+            <span class="photo-credit" id="routeHeroCredit"></span>
+            <div class="hero-overlay"></div>
+
+            <div class="town-detail-content container fade-up">
+                <a href="index.html#rutas" class="breadcrumb-link" id="breadcrumb">Inicio / Rutas</a>
+                <span class="section-eyebrow" id="routeLabel">Ruta</span>
+                <h1 id="routeName">Ruta Cafetera</h1>
+                <p id="routePhrase">Un viaje entre montañas, balcones coloridos y aroma a café recién tostado.</p>
+            </div>
+        </section>
+
+        <section class="town-detail-section">
+            <div class="container detail-layout">
+                <article class="detail-story fade-up">
+                    <span class="section-eyebrow" id="conceptLabel">Concepto</span>
+                    <h2 id="routeConceptTitle">La ruta en detalle</h2>
+                    <p id="routeDescription"></p>
+                    <p id="routeNarrative"></p>
+                </article>
+
+                <aside class="detail-facts fade-up delay-1">
+                    <h2 id="quickFactsTitle">Datos rápidos</h2>
+                    <div class="fact-grid">
+                        <div>
+                            <span id="durationLabel">Duración</span>
+                            <strong id="routeDuration"></strong>
+                        </div>
+                        <div>
+                            <span id="distanceLabel">Distancia total</span>
+                            <strong id="routeDistance"></strong>
+                        </div>
+                        <div>
+                            <span id="focusLabel">Enfoque</span>
+                            <strong id="routeFocus"></strong>
+                        </div>
+                        <div>
+                            <span id="startLabel">Salida y regreso</span>
+                            <strong>Medellín</strong>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="town-detail-section detail-muted">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <span class="section-eyebrow" id="stopsLabel">Recorrido</span>
+                    <h2 class="section-title" id="stopsTitle">Pueblos de la ruta</h2>
+                    <p class="section-subtitle" id="stopsSubtitle">Cada parada suma una postal distinta al viaje.</p>
+                </div>
+
+                <div class="route-stops" id="routeStops"></div>
+            </div>
+        </section>
+
+        <section class="town-detail-section">
+            <div class="container map-layout">
+                <div class="fade-up">
+                    <span class="section-eyebrow" id="mapLabel">Mapa</span>
+                    <h2 class="section-title" id="mapTitle">Ruta sugerida</h2>
+                    <p id="mapText"></p>
+                    <a id="mapsLink" class="btn detail-btn" target="_blank" rel="noopener">Abrir ruta en Google Maps</a>
+                </div>
+
+                <div class="map-frame fade-up delay-1">
+                    <iframe id="mapFrame" title="Mapa de la ruta" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-logo">Postales de Antioquia</h3>
+                    <p>Una revista digital inspirada en los pueblos, paisajes y tradiciones que hacen única a Antioquia.</p>
+                </div>
+                <div>
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="index.html#home">Inicio</a></li>
+                        <li><a href="index.html#explorar">Explorar</a></li>
+                        <li><a href="index.html#rutas">Rutas</a></li>
+                        <li><a href="index.html#galeria">Galería</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Pueblos</h4>
+                    <ul>
+                        <li>Guatapé</li>
+                        <li>Jardín</li>
+                        <li>Jericó</li>
+                        <li>Santa Fe de Antioquia</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Proyecto</h4>
+                    <p>Proyecto académico de diseño editorial y web.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Postales de Antioquia — Proyecto académico</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="accessibility-widget" id="accessibilityWidget">
+        <button class="accessibility-toggle" id="accessibilityToggle" type="button" aria-label="Abrir opciones de accesibilidad" aria-expanded="false" aria-controls="accessibilityPanel">Aa</button>
+
+        <div class="accessibility-panel" id="accessibilityPanel" aria-label="Opciones de accesibilidad">
+            <h2>Accesibilidad</h2>
+            <button type="button" class="accessibility-option" data-accessibility="largeText">Texto grande</button>
+            <button type="button" class="accessibility-option" data-accessibility="highContrast">Alto contraste</button>
+            <button type="button" class="accessibility-option" data-accessibility="reduceMotion">Reducir movimiento</button>
+            <button type="button" class="accessibility-option" data-accessibility="underlineLinks">Subrayar enlaces</button>
+            <button type="button" class="accessibility-reset" id="accessibilityReset">Restablecer</button>
+        </div>
+    </div>
+
+    <script>
+        const routes = {
+            cafetera: {
+                name: "Ruta Cafetera",
+                image: "imagenes/jardin.jpeg",
+                icon: "🍃",
+                phrase: "Un viaje entre montañas, balcones coloridos y aroma a café recién tostado.",
+                towns: ["La Ceja", "Jericó", "Jardín"],
+                sequence: ["Medellín", "La Ceja", "Jericó", "Jardín", "Medellín"],
+                duration: "2 a 3 días",
+                distance: "300 a 340 km aprox.",
+                focus: "Café, montaña y tradición",
+                concept: "Cafetales, montañas, balcones floridos y pueblos con ritmo pausado.",
+                description: "Esta ruta conecta el oriente cercano con el suroeste antioqueño. La Ceja funciona como primera parada por su cercanía a Medellín y su paisaje agrícola de clima frío.",
+                narrative: "Desde allí, el recorrido baja hacia Jericó y continúa a Jardín, dos destinos ideales para hablar de café, tradición, paisaje, color y fotografía turística."
+            },
+            patrimonial: {
+                name: "Ruta Patrimonial",
+                image: "imagenes/santafe.jpeg",
+                icon: "🏛️",
+                phrase: "Plazas, fachadas coloniales y pueblos que guardan la memoria de Antioquia.",
+                towns: ["Santa Fe de Antioquia", "Marinilla", "Concepción", "Jericó"],
+                sequence: ["Medellín", "Santa Fe de Antioquia", "Medellín", "Marinilla", "Concepción", "Jericó", "Medellín"],
+                duration: "3 días",
+                distance: "360 a 410 km aprox.",
+                focus: "Arquitectura, historia y plazas",
+                concept: "Arquitectura colonial, plazas históricas, iglesias, calles empedradas y memoria cultural.",
+                description: "La ruta patrimonial reúne los pueblos con mayor fuerza histórica y arquitectónica dentro de la selección. Santa Fe abre el recorrido por su identidad colonial y su valor como antigua capital.",
+                narrative: "Luego el viaje toma el corredor del oriente con Marinilla y Concepción, antes de cerrar en Jericó con balcones, iglesias y memoria cultural."
+            },
+            natural: {
+                name: "Ruta Natural",
+                image: "imagenes/guatape.jpeg",
+                icon: "🌿",
+                phrase: "Embalses, montañas y cascadas en una ruta visualmente poderosa.",
+                towns: ["Marinilla", "El Peñol", "Guatapé", "Granada", "Cocorná"],
+                sequence: ["Medellín", "Marinilla", "El Peñol", "Guatapé", "Granada", "Cocorná", "Medellín"],
+                duration: "2 a 3 días",
+                distance: "270 a 320 km aprox.",
+                focus: "Embalses, cascadas y senderos",
+                concept: "Embalses, montañas, cascadas, miradores, ríos y senderos.",
+                description: "Esta ruta agrupa los paisajes naturales del oriente antioqueño. Marinilla abre el corredor antes de avanzar hacia El Peñol y Guatapé, donde el embalse y los miradores construyen una postal fuerte.",
+                narrative: "Después, el viaje puede continuar hacia Granada y cerrar en Cocorná, ideal para destacar ríos, cascadas, caminatas y actividades de aventura."
+            },
+            gastronomica: {
+                name: "Ruta Gastronómica",
+                image: "imagenes/jerico.jpeg",
+                icon: "🍽️",
+                phrase: "Una ruta para probar Antioquia desde sus sabores y mesas de pueblo.",
+                towns: ["Marinilla", "Guatapé", "Santa Fe de Antioquia", "Jericó", "Jardín"],
+                sequence: ["Medellín", "Marinilla", "Guatapé", "Medellín", "Santa Fe de Antioquia", "Medellín", "Jericó", "Jardín", "Medellín"],
+                duration: "3 a 4 días",
+                distance: "430 a 500 km aprox.",
+                focus: "Sabores típicos y cocina local",
+                concept: "Sabores tradicionales, dulces, cafés, platos típicos y cocina de pueblo.",
+                description: "La ruta gastronómica funciona como una experiencia modular porque sus pueblos están distribuidos en distintos corredores. Marinilla y Guatapé componen un primer bloque de oriente.",
+                narrative: "Santa Fe aporta sabores de tierra caliente, frutas y dulces; Jericó y Jardín cierran desde el suroeste con cafés, repostería, fondas y platos de montaña."
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const key = params.get("r") || "cafetera";
+        const route = routes[key] || routes.cafetera;
+        const townSlugs = {
+            "La Ceja": "la-ceja",
+            "Jericó": "jerico",
+            "Jardín": "jardin",
+            "Santa Fe de Antioquia": "santafe",
+            "Marinilla": "marinilla",
+            "Concepción": "concepcion",
+            "El Peñol": "penol",
+            "Guatapé": "guatape",
+            "Granada": "granada",
+            "Cocorná": "cocorna"
+        };
+
+        const encodePlace = (place) => encodeURIComponent(`${place}, Antioquia, Colombia`);
+        const origin = encodeURIComponent("Medellín, Antioquia, Colombia");
+        const destination = origin;
+        const waypoints = route.sequence.slice(1, -1).map(encodePlace).join("%7C");
+        const directionsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypoints}&travelmode=driving`;
+        const mapQuery = encodeURIComponent(route.sequence.join(" to "));
+
+        const routeStops = document.getElementById("routeStops");
+        const imageCredits = {
+            "imagenes/guatape.jpeg": "Foto: Guatapé Colombia",
+            "imagenes/jardin.jpeg": "Foto: H13N",
+            "imagenes/jerico.jpeg": "Foto: Travelgrafía",
+            "imagenes/santafe.jpeg": "Foto: Real City Tours"
+        };
+        const routeTranslations = {
+            es: {
+                brand: "Postales de Antioquia",
+                nav: ["Inicio", "Explorar", "Rutas", "Galería", "Historias", "Nosotros"],
+                breadcrumb: "Inicio / Rutas",
+                routeLabel: `${route.icon} Ruta turística`,
+                conceptLabel: "Concepto",
+                conceptTitle: "La ruta en detalle",
+                quickFacts: "Datos rápidos",
+                labels: ["Duración", "Distancia total", "Enfoque", "Salida y regreso"],
+                medellin: "Medellín",
+                stopsLabel: "Recorrido",
+                stopsTitle: "Pueblos de la ruta",
+                stopsSubtitle: "Cada parada suma una postal distinta al viaje.",
+                stopText: "Parada sugerida dentro de la ruta para conectar paisaje, cultura y experiencia local.",
+                mapLabel: "Mapa",
+                mapTitle: "Ruta sugerida",
+                mapText: `Secuencia sugerida: ${route.sequence.join(" → ")}. Las distancias son aproximadas y pueden variar según tráfico y estado de las vías.`,
+                mapsButton: "Abrir ruta en Google Maps",
+                footerTagline: "Una revista digital inspirada en los pueblos, paisajes y tradiciones que hacen única a Antioquia.",
+                footerExplore: "Explorar",
+                footerTowns: "Pueblos",
+                footerProject: "Proyecto",
+                footerProjectText: "Proyecto académico de diseño editorial y web.",
+                footerCredit: "© 2025 Postales de Antioquia — Proyecto académico",
+                accessibilityTitle: "Accesibilidad",
+                accessibilityOptions: ["Texto grande", "Alto contraste", "Reducir movimiento", "Subrayar enlaces"],
+                accessibilityReset: "Restablecer",
+                languageLabel: "Cambiar idioma a inglés",
+                route
+            },
+            en: {
+                brand: "Postcards from Antioquia",
+                nav: ["Home", "Explore", "Routes", "Gallery", "Stories", "About"],
+                breadcrumb: "Home / Routes",
+                routeLabel: `${route.icon} Travel route`,
+                conceptLabel: "Concept",
+                conceptTitle: "The route in detail",
+                quickFacts: "Quick facts",
+                labels: ["Duration", "Total distance", "Focus", "Start and return"],
+                medellin: "Medellín",
+                stopsLabel: "Route",
+                stopsTitle: "Towns on the route",
+                stopsSubtitle: "Each stop adds a different postcard to the journey.",
+                stopText: "Suggested stop within the route to connect landscape, culture and local experience.",
+                mapLabel: "Map",
+                mapTitle: "Suggested route",
+                mapText: `Suggested sequence: ${route.sequence.join(" → ")}. Distances are approximate and may vary depending on traffic and road conditions.`,
+                mapsButton: "Open route in Google Maps",
+                footerTagline: "A digital magazine inspired by the towns, landscapes and traditions that make Antioquia unique.",
+                footerExplore: "Explore",
+                footerTowns: "Towns",
+                footerProject: "Project",
+                footerProjectText: "Academic project for editorial and web design.",
+                footerCredit: "© 2025 Postcards from Antioquia — Academic project",
+                accessibilityTitle: "Accessibility",
+                accessibilityOptions: ["Large text", "High contrast", "Reduce motion", "Underline links"],
+                accessibilityReset: "Reset",
+                languageLabel: "Switch language to Spanish",
+                route: {
+                    ...route,
+                    name: route.name
+                        .replace("Ruta Cafetera", "Coffee Route")
+                        .replace("Ruta Patrimonial", "Heritage Route")
+                        .replace("Ruta Natural", "Nature Route")
+                        .replace("Ruta Gastronómica", "Food Route"),
+                    phrase: {
+                        cafetera: "A journey through mountains, colorful balconies and the aroma of freshly roasted coffee.",
+                        patrimonial: "Plazas, colonial facades and towns that hold Antioquia's memory.",
+                        natural: "Reservoirs, mountains and waterfalls in a visually powerful route.",
+                        gastronomica: "A route to taste Antioquia through flavors and town tables."
+                    }[key],
+                    duration: route.duration.replace("2 a 3 días", "2 to 3 days").replace("3 días", "3 days").replace("3 a 4 días", "3 to 4 days"),
+                    distance: route.distance.replace("aprox.", "approx."),
+                    focus: {
+                        cafetera: "Coffee, mountains and tradition",
+                        patrimonial: "Architecture, history and plazas",
+                        natural: "Reservoirs, waterfalls and trails",
+                        gastronomica: "Typical flavors and local cuisine"
+                    }[key],
+                    description: {
+                        cafetera: "This route connects the nearby East with Southwestern Antioquia. La Ceja works as the first stop because of its closeness to Medellín and its cool agricultural landscape.",
+                        patrimonial: "The heritage route brings together the towns with the strongest historical and architectural character in the selection. Santa Fe opens the journey with its colonial identity and its value as a former capital.",
+                        natural: "This route gathers the natural landscapes of Eastern Antioquia. Marinilla opens the corridor before moving toward El Peñol and Guatapé, where the reservoir and viewpoints create a strong postcard.",
+                        gastronomica: "The food route works as a modular experience because its towns are distributed across different corridors. Marinilla and Guatapé form the first eastern block."
+                    }[key],
+                    narrative: {
+                        cafetera: "From there, the route descends toward Jericó and continues to Jardín, two ideal destinations for coffee, tradition, landscape, color and travel photography.",
+                        patrimonial: "Then the trip takes the eastern corridor through Marinilla and Concepción before closing in Jericó with balconies, churches and cultural memory.",
+                        natural: "After that, the journey can continue toward Granada and finish in Cocorná, ideal for rivers, waterfalls, hikes and adventure activities.",
+                        gastronomica: "Santa Fe adds warm-land flavors, fruits and sweets; Jericó and Jardín close the route from the southwest with coffee, pastries, fondas and mountain dishes."
+                    }[key]
+                }
+            }
+        };
+
+        const setText = (selector, value) => {
+            const element = document.querySelector(selector);
+            if (element) element.textContent = value;
+        };
+
+        const setListText = (selector, values) => {
+            document.querySelectorAll(selector).forEach((element, index) => {
+                if (values[index]) element.textContent = values[index];
+            });
+        };
+
+        const renderRoutePage = (language) => {
+            const text = routeTranslations[language];
+            const currentRoute = text.route;
+
+            document.documentElement.lang = language;
+            document.title = `${currentRoute.name} | ${text.brand}`;
+            document.querySelector("meta[name='description']").setAttribute("content", `${currentRoute.name}: pueblos, duración, distancia y mapa sugerido.`);
+            setText(".nav-logo-text", text.brand);
+            setListText(".nav-links a", text.nav);
+            setText("#breadcrumb", text.breadcrumb);
+            setText("#routeLabel", text.routeLabel);
+            setText("#routeName", currentRoute.name);
+            setText("#routePhrase", currentRoute.phrase);
+            setText("#conceptLabel", text.conceptLabel);
+            setText("#routeConceptTitle", text.conceptTitle);
+            setText("#routeDescription", currentRoute.description);
+            setText("#routeNarrative", currentRoute.narrative);
+            setText("#quickFactsTitle", text.quickFacts);
+            setText("#durationLabel", text.labels[0]);
+            setText("#distanceLabel", text.labels[1]);
+            setText("#focusLabel", text.labels[2]);
+            setText("#startLabel", text.labels[3]);
+            document.querySelector("#startLabel + strong").textContent = text.medellin;
+            setText("#routeDuration", currentRoute.duration);
+            setText("#routeDistance", currentRoute.distance);
+            setText("#routeFocus", currentRoute.focus);
+            setText("#stopsLabel", text.stopsLabel);
+            setText("#stopsTitle", text.stopsTitle);
+            setText("#stopsSubtitle", text.stopsSubtitle);
+            setText("#mapLabel", text.mapLabel);
+            setText("#mapTitle", text.mapTitle);
+            setText("#mapText", text.mapText);
+            setText("#mapsLink", text.mapsButton);
+            setText(".footer-logo", text.brand);
+            setText(".footer-grid > div:first-child p", text.footerTagline);
+            setText(".footer-grid > div:nth-child(2) h4", text.footerExplore);
+            setListText(".footer-grid > div:nth-child(2) a", text.nav.slice(0, 4));
+            setText(".footer-grid > div:nth-child(3) h4", text.footerTowns);
+            setText(".footer-grid > div:nth-child(4) h4", text.footerProject);
+            setText(".footer-grid > div:nth-child(4) p", text.footerProjectText);
+            setText(".footer-bottom p", text.footerCredit);
+            setText(".accessibility-panel h2", text.accessibilityTitle);
+            setListText(".accessibility-option", text.accessibilityOptions);
+            setText(".accessibility-reset", text.accessibilityReset);
+
+            document.getElementById("routeHeroImage").src = route.image;
+            document.getElementById("routeHeroImage").alt = currentRoute.name;
+            document.getElementById("routeHeroCredit").textContent = imageCredits[route.image] || "Fuente fotográfica por confirmar";
+            document.getElementById("mapsLink").href = directionsUrl;
+            document.getElementById("mapFrame").src = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+
+            routeStops.innerHTML = "";
+            route.towns.forEach((town, index) => {
+                const card = document.createElement("a");
+                card.className = `route-stop-card fade-up delay-${index % 4}`;
+                card.href = `pueblo.html?p=${townSlugs[town]}`;
+                card.innerHTML = `<span>${String(index + 1).padStart(2, "0")}</span><h3>${town}</h3><p>${text.stopText}</p>`;
+                routeStops.appendChild(card);
+            });
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        const observeAnimatedItems = () => {
+            document.querySelectorAll(".fade-up").forEach((item) => observer.observe(item));
+        };
+
+        const languageToggle = document.getElementById("languageToggle");
+        const languageCode = document.getElementById("languageCode");
+        const languageFlag = document.getElementById("languageFlag");
+        const applyLanguageShell = (language) => {
+            const isSpanish = language === "es";
+            renderRoutePage(language);
+            observeAnimatedItems();
+            languageCode.textContent = isSpanish ? "ES" : "EN";
+            languageFlag.classList.toggle("flag-colombia", isSpanish);
+            languageFlag.classList.toggle("flag-uk", !isSpanish);
+            languageToggle.setAttribute("aria-label", routeTranslations[language].languageLabel);
+            localStorage.setItem("siteLanguage", language);
+        };
+
+        applyLanguageShell(localStorage.getItem("siteLanguage") || "es");
+        languageToggle.addEventListener("click", () => {
+            applyLanguageShell(document.documentElement.lang === "es" ? "en" : "es");
+        });
+
+        const accessibilityToggle = document.getElementById("accessibilityToggle");
+        const accessibilityPanel = document.getElementById("accessibilityPanel");
+        const accessibilityOptions = document.querySelectorAll(".accessibility-option");
+        const accessibilityReset = document.getElementById("accessibilityReset");
+        const accessibilityClasses = {
+            largeText: "a11y-large-text",
+            highContrast: "a11y-high-contrast",
+            reduceMotion: "a11y-reduce-motion",
+            underlineLinks: "a11y-underline-links"
+        };
+        const savedAccessibility = JSON.parse(localStorage.getItem("accessibilityOptions") || "{}");
+        const updateAccessibilityButtons = () => {
+            accessibilityOptions.forEach((button) => {
+                const option = button.dataset.accessibility;
+                const isActive = document.body.classList.contains(accessibilityClasses[option]);
+                button.classList.toggle("active", isActive);
+                button.setAttribute("aria-pressed", String(isActive));
+            });
+        };
+        Object.entries(accessibilityClasses).forEach(([option, className]) => {
+            if (savedAccessibility[option]) document.body.classList.add(className);
+        });
+        updateAccessibilityButtons();
+        accessibilityToggle.addEventListener("click", () => {
+            const isOpen = accessibilityPanel.classList.toggle("open");
+            accessibilityToggle.setAttribute("aria-expanded", String(isOpen));
+        });
+        accessibilityOptions.forEach((button) => {
+            button.addEventListener("click", () => {
+                const option = button.dataset.accessibility;
+                const className = accessibilityClasses[option];
+                document.body.classList.toggle(className);
+                savedAccessibility[option] = document.body.classList.contains(className);
+                localStorage.setItem("accessibilityOptions", JSON.stringify(savedAccessibility));
+                updateAccessibilityButtons();
+            });
+        });
+        accessibilityReset.addEventListener("click", () => {
+            Object.values(accessibilityClasses).forEach((className) => document.body.classList.remove(className));
+            localStorage.removeItem("accessibilityOptions");
+            updateAccessibilityButtons();
+        });
+    </script>
+</body>
+
+</html>

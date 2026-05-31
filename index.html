@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Postales de Antioquia</title>
+
+    <meta name="description"
+        content="Revista digital turística sobre los pueblos más fascinantes de Antioquia.">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+
+<body>
+
+    <!-- ====================================== -->
+    <!-- NAVBAR -->
+    <!-- ====================================== -->
+
+    <header id="navbar">
+
+        <div class="nav-inner">
+
+            <a href="#home" class="nav-logo">
+
+                <span class="nav-logo-text">
+                    Postales de Antioquia
+                </span>
+
+            </a>
+
+            <nav>
+
+                <ul class="nav-links">
+
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#explorar">Explorar</a></li>
+                    <li><a href="#rutas">Rutas</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#historias">Historias</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+
+                </ul>
+
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="language-toggle"
+                    id="languageToggle"
+                    type="button"
+                    aria-label="Cambiar idioma a inglés">
+                    <span class="flag-icon flag-colombia" id="languageFlag" aria-hidden="true"></span>
+                    <span id="languageCode">ES</span>
+                </button>
+
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ====================================== -->
+    <!-- MOBILE NAV -->
+    <!-- ====================================== -->
+
+    <div class="mobile-nav" id="mobileNav">
+
+        <a href="#home">Inicio</a>
+        <a href="#explorar">Explorar</a>
+        <a href="#rutas">Rutas</a>
+        <a href="#galeria">Galería</a>
+        <a href="#historias">Historias</a>
+        <a href="#nosotros">Nosotros</a>
+
+    </div>
+
+    <main>
+
+        <!-- ====================================== -->
+        <!-- HERO -->
+        <!-- ====================================== -->
+
+        <section id="home" class="hero">
+
+            <img src="imagenes/hero-antioquia.jpeg"
+                alt="Paisaje de Antioquia"
+                class="hero-bg">
+            <span class="photo-credit">Foto: Hotel Fundadores de Cauca Viejo</span>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content container fade-up">
+
+                <span class="section-eyebrow">
+
+                    DESCUBRE ANTIOQUIA
+
+                </span>
+
+                <h1>
+
+                    Antioquia en cada postal
+
+                </h1>
+
+                <p>
+
+                    Una experiencia digital para recorrer
+                    los pueblos antioqueños a través de historias,
+                    cultura y paisajes.
+
+                </p>
+
+                <a href="#explorar" class="btn btn-outline-white">
+
+                    Explorar pueblos →
+
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- EXPLORAR / PUEBLOS -->
+        <!-- ========================================= -->
+        <section id="explorar" class="featured-towns">
+            <div class="container">
+
+                <div class="section-header fade-up">
+                    <span class="section-eyebrow">Explorar</span>
+                    <h2 class="section-title">Pueblos que enamoran</h2>
+                    <p class="section-subtitle">
+                        Lugares donde la historia, la arquitectura y el paisaje
+                        crean experiencias difíciles de olvidar.
+                    </p>
+                </div>
+
+                <div class="filters">
+
+                    <button class="filter-btn active" data-filter="all">
+                        Todos
+                    </button>
+
+                    <button class="filter-btn" data-filter="calido">
+                        Cálido
+                    </button>
+
+                    <button class="filter-btn" data-filter="templado">
+                        Templado
+                    </button>
+
+                    <button class="filter-btn" data-filter="frio">
+                        Frío
+                    </button>
+
+                </div>
+
+                <div class="town-grid">
+
+                    <article class="town-card fade-up" data-category="calido">
+                        <img src="imagenes/guatape.jpeg"
+                            alt="Guatapé Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Oriente Antioqueño</span>
+                            <h3>Guatapé</h3>
+                            <p>
+                                Color, agua y uno de los paisajes más icónicos
+                                de Colombia.
+                            </p>
+                            <a href="pueblo.html?p=guatape" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up delay-1" data-category="templado">
+                        <img src="imagenes/jardin.jpeg"
+                            alt="Jardín Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Suroeste Antioqueño</span>
+                            <h3>Jardín</h3>
+                            <p>
+                                Cafetales, montañas y arquitectura colonial
+                                perfectamente conservada.
+                            </p>
+                            <a href="pueblo.html?p=jardin" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up delay-2" data-category="calido">
+                        <img src="imagenes/santafe.jpeg"
+                            alt="Santa Fe de Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Occidente Antioqueño</span>
+                            <h3>Santa Fe de Antioquia</h3>
+                            <p>
+                                Calles empedradas, calor colonial y siglos
+                                de historia.
+                            </p>
+                            <a href="pueblo.html?p=santafe" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up delay-3" data-category="templado">
+                        <img src="imagenes/jerico.jpeg"
+                            alt="Jericó Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Suroeste Antioqueño</span>
+                            <h3>Jericó</h3>
+                            <p>
+                                Balcones coloridos, café de altura y tradición
+                                antioqueña.
+                            </p>
+                            <a href="pueblo.html?p=jerico" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up" data-category="frio">
+                        <img src="imagenes/concepcion.jpeg"
+                            alt="Concepción Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Norte Antioqueño</span>
+                            <h3>Concepción</h3>
+                            <p>
+                                Un secreto entre montañas, niebla y calles que
+                                guardan calma.
+                            </p>
+                            <a href="pueblo.html?p=concepcion" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up delay-1" data-category="templado">
+                        <img src="imagenes/marinilla.jpeg"
+                            alt="Marinilla Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Oriente Antioqueño</span>
+                            <h3>Marinilla</h3>
+                            <p>
+                                Música, tradición y arquitectura republicana
+                                en una postal viva.
+                            </p>
+                            <a href="pueblo.html?p=marinilla" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up delay-2" data-category="templado">
+                        <img src="imagenes/granada.jpeg"
+                            alt="Granada Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Oriente Antioqueño</span>
+                            <h3>Granada</h3>
+                            <p>
+                                Memoria, montaña y una fuerza comunitaria que
+                                se siente en sus calles.
+                            </p>
+                            <a href="pueblo.html?p=granada" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up delay-3" data-category="frio">
+                        <img src="imagenes/la-ceja.jpeg"
+                            alt="La Ceja Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Oriente Antioqueño</span>
+                            <h3>La Ceja</h3>
+                            <p>
+                                Flores, aire fresco y paisaje verde en el
+                                corazón del altiplano.
+                            </p>
+                            <a href="pueblo.html?p=la-ceja" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up" data-category="calido">
+                        <img src="imagenes/cocorna.jpeg"
+                            alt="Cocorná Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Oriente Antioqueño</span>
+                            <h3>Cocorná</h3>
+                            <p>
+                                Ríos, cascadas y aventura entre montañas
+                                tropicales.
+                            </p>
+                            <a href="pueblo.html?p=cocorna" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="town-card fade-up delay-1" data-category="templado">
+                        <img src="imagenes/penol.jpeg"
+                            alt="El Peñol Antioquia"
+                            loading="lazy">
+
+                        <div class="town-overlay">
+                            <span class="town-region">Oriente Antioqueño</span>
+                            <h3>El Peñol</h3>
+                            <p>
+                                Agua, piedra y horizonte abierto para mirar
+                                Antioquia desde otra altura.
+                            </p>
+                            <a href="pueblo.html?p=penol" class="btn btn-outline-white">
+                                Conocer más
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================= -->
+        <!-- RUTAS -->
+        <!-- ========================================= -->
+        <section id="rutas" class="routes-section">
+
+            <div class="container">
+
+                <div class="section-header fade-up">
+                    <span class="section-eyebrow">Experiencias</span>
+                    <h2 class="section-title">Elige tu ruta</h2>
+                    <p class="section-subtitle">
+                        Cada camino revela una versión diferente de Antioquia.
+                    </p>
+                </div>
+
+                <div class="routes-grid">
+
+                    <a href="ruta.html?r=cafetera" class="route-card fade-up">
+                        <div class="route-icon">🍃</div>
+                        <h3>Ruta Cafetera</h3>
+                        <p>
+                            Cafetales, montañas y pueblos con aroma a café recién tostado.
+                        </p>
+                    </a>
+
+                    <a href="ruta.html?r=patrimonial" class="route-card fade-up delay-1">
+                        <div class="route-icon">🏛️</div>
+                        <h3>Ruta Patrimonial</h3>
+                        <p>
+                            Arquitectura colonial, plazas históricas y tradición.
+                        </p>
+                    </a>
+
+                    <a href="ruta.html?r=natural" class="route-card fade-up delay-2">
+                        <div class="route-icon">🌿</div>
+                        <h3>Ruta Natural</h3>
+                        <p>
+                            Embalses, montañas, cascadas y senderos inolvidables.
+                        </p>
+                    </a>
+
+                    <a href="ruta.html?r=gastronomica" class="route-card fade-up delay-3">
+                        <div class="route-icon">🍽️</div>
+                        <h3>Ruta Gastronómica</h3>
+                        <p>
+                            Sabores tradicionales que cuentan historias de región.
+                        </p>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- GALERÍA -->
+        <!-- ========================================= -->
+        <section id="galeria" class="gallery-section">
+
+            <div class="container">
+
+                <div class="section-header fade-up">
+                    <span class="section-eyebrow">Fotografía</span>
+                    <h2 class="section-title">Antioquia en imágenes</h2>
+                    <p class="section-subtitle">
+                        Fragmentos de paisaje, cultura y memoria capturados
+                        a lo largo del territorio antioqueño.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <figure><img src="imagenes/guatape.jpeg" alt="Guatapé" loading="lazy"><figcaption>Foto: Guatapé Colombia</figcaption></figure>
+                    <figure><img src="imagenes/jardin.jpeg" alt="Jardín" loading="lazy"><figcaption>Foto: H13N</figcaption></figure>
+                    <figure><img src="imagenes/jerico.jpeg" alt="Jericó" loading="lazy"><figcaption>Foto: Travelgrafía</figcaption></figure>
+                    <figure><img src="imagenes/santafe.jpeg" alt="Santa Fe de Antioquia" loading="lazy"><figcaption>Foto: Real City Tours</figcaption></figure>
+                    <figure><img src="imagenes/concepcion.jpeg" alt="Concepción" loading="lazy"><figcaption>Foto: Radio Nacional de Colombia</figcaption></figure>
+                    <figure><img src="imagenes/marinilla.jpeg" alt="Marinilla" loading="lazy"><figcaption>Foto: Turismo Antioquia Travel</figcaption></figure>
+                    <figure><img src="imagenes/granada.jpeg" alt="Granada" loading="lazy"><figcaption>Foto: Expedia</figcaption></figure>
+                    <figure><img src="imagenes/la-ceja.jpeg" alt="La Ceja" loading="lazy"><figcaption>Foto: Radio Nacional de Colombia</figcaption></figure>
+                    <figure><img src="imagenes/cocorna.jpeg" alt="Cocorná" loading="lazy"><figcaption>Foto: Oriente Antioqueño</figcaption></figure>
+                    <figure><img src="imagenes/penol.jpeg" alt="Peñol" loading="lazy"><figcaption>Foto: Provincia ABT</figcaption></figure>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- HISTORIAS -->
+        <!-- ========================================= -->
+        <section id="historias" class="stories-section">
+
+            <div class="container">
+
+                <div class="section-header fade-up">
+                    <span class="section-eyebrow">Editorial</span>
+                    <h2 class="section-title">Historias desde los caminos</h2>
+                </div>
+
+                <div class="stories-grid">
+
+                    <article class="story-feature fade-up">
+
+                        <img src="imagenes/penol.jpeg"
+                            alt="Amanecer en el Peñol"
+                            loading="lazy">
+
+                        <div class="story-content">
+
+                            <span class="story-category">
+                                Naturaleza
+                            </span>
+
+                            <h3>
+                                El amanecer en el Peñol
+                            </h3>
+
+                            <p>
+                                Cuando la neblina comienza a retirarse y el embalse
+                                refleja los primeros tonos dorados del día,
+                                Guatapé muestra una de sus versiones más memorables.
+                            </p>
+
+                            <a href="historia.html?h=amanecer-penol" class="btn-ghost">
+                                Leer más <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="story-card fade-up delay-1">
+
+                        <img src="imagenes/jardin.jpeg"
+                            alt="Sabores de Jardín"
+                            loading="lazy">
+
+                        <div class="story-content">
+
+                            <span class="story-category">
+                                Gastronomía
+                            </span>
+
+                            <h3>
+                                Los sabores que definen a Jardín
+                            </h3>
+
+                            <p>
+                                Café especial, tradición campesina y recetas
+                                transmitidas durante generaciones.
+                            </p>
+
+                            <a href="historia.html?h=sabores-jardin" class="btn-ghost">
+                                Leer más <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <article class="story-card fade-up delay-2">
+
+                        <img src="imagenes/santafe.jpeg"
+                            alt="Arquitectura colonial"
+                            loading="lazy">
+
+                        <div class="story-content">
+
+                            <span class="story-category">
+                                Patrimonio
+                            </span>
+
+                            <h3>
+                                Arquitectura que cuenta siglos
+                            </h3>
+
+                            <p>
+                                Cada balcón y cada calle empedrada conserva una
+                                parte de la historia antioqueña.
+                            </p>
+
+                            <a href="historia.html?h=arquitectura-siglos" class="btn-ghost">
+                                Leer más <span>→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- NOSOTROS -->
+        <!-- ========================================= -->
+
+        <section id="nosotros" class="about-section">
+
+            <div class="container">
+
+                <div class="section-header fade-up">
+
+                    <span class="section-eyebrow">
+                        QUIÉNES SOMOS
+                    </span>
+
+                    <h2 class="section-title">
+                        Una mirada joven sobre Antioquia
+                    </h2>
+
+                </div>
+
+                <div class="about-grid">
+
+                    <div class="about-image">
+
+                        <img src="imagenes/sofi-y-yo.jpeg"
+                            alt="Paisajes de Antioquia"
+                            loading="lazy">
+
+                    </div>
+
+                    <div class="about-content">
+
+                        <h3>
+                            Nuestro objetivo
+                        </h3>
+
+                        <p>
+                            Postales de Antioquia nace como un proyecto académico
+                            inspirado en los paisajes, pueblos y tradiciones que
+                            hacen única a nuestra región. Más que una guía turística,
+                            buscamos construir una experiencia visual y narrativa que
+                            invite a descubrir Antioquia desde una mirada cercana,
+                            auténtica y contemporánea.
+                        </p>
+
+                        <h3>
+                            Concepto creativo
+                        </h3>
+
+                        <p>
+                            Cada pueblo fue tratado como una postal viva:
+                            una combinación de fotografía, historia, cultura y
+                            experiencias que permiten al visitante imaginarse allí
+                            incluso antes de emprender el viaje.
+                        </p>
+
+                        <h3>
+                            Proceso de diseño
+                        </h3>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item">
+                                <span>01</span>
+                                Investigación de pueblos y rutas.
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>02</span>
+                                Curaduría fotográfica y narrativa.
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>03</span>
+                                Diseño editorial y experiencia web.
+                            </div>
+
+                            <div class="timeline-item">
+                                <span>04</span>
+                                Desarrollo y presentación final.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        </main>
+
+        <!-- ========================================= -->
+        <!-- FOOTER -->
+        <!-- ========================================= -->
+        <footer class="footer">
+
+            <div class="container">
+
+                <div class="footer-grid">
+
+                    <div>
+
+                        <h3 class="footer-logo">
+                            Postales de Antioquia
+                        </h3>
+
+                        <p>
+                            Una revista digital inspirada en los pueblos,
+                            paisajes y tradiciones que hacen única a Antioquia.
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Explorar</h4>
+
+                        <ul>
+                            <li><a href="#home">Inicio</a></li>
+                            <li><a href="#explorar">Explorar</a></li>
+                            <li><a href="#rutas">Rutas</a></li>
+                            <li><a href="#galeria">Galería</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Pueblos</h4>
+
+                        <ul>
+                            <li>Guatapé</li>
+                            <li>Jardín</li>
+                            <li>Jericó</li>
+                            <li>Santa Fe de Antioquia</li>
+                        </ul>
+
+                    </div>
+
+                    <div>
+
+                        <h4>Proyecto</h4>
+
+                        <p>
+                            Proyecto académico de diseño editorial y web.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-bottom">
+
+                    <p>
+                        © 2025 Postales de Antioquia — Proyecto académico
+                    </p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+        <!-- ========================================= -->
+        <!-- ACCESSIBILITY WIDGET -->
+        <!-- ========================================= -->
+        <div class="accessibility-widget" id="accessibilityWidget">
+
+            <button class="accessibility-toggle"
+                id="accessibilityToggle"
+                type="button"
+                aria-label="Abrir opciones de accesibilidad"
+                aria-expanded="false"
+                aria-controls="accessibilityPanel">
+                Aa
+            </button>
+
+            <div class="accessibility-panel" id="accessibilityPanel" aria-label="Opciones de accesibilidad">
+
+                <h2>Accesibilidad</h2>
+
+                <button type="button" class="accessibility-option" data-accessibility="largeText">
+                    Texto grande
+                </button>
+
+                <button type="button" class="accessibility-option" data-accessibility="highContrast">
+                    Alto contraste
+                </button>
+
+                <button type="button" class="accessibility-option" data-accessibility="reduceMotion">
+                    Reducir movimiento
+                </button>
+
+                <button type="button" class="accessibility-option" data-accessibility="underlineLinks">
+                    Subrayar enlaces
+                </button>
+
+                <button type="button" class="accessibility-reset" id="accessibilityReset">
+                    Restablecer
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ========================================= -->
+        <!-- SCRIPT -->
+        <!-- ========================================= -->
+        <script src="script.js"></script>
+
+</body>
+</html>
